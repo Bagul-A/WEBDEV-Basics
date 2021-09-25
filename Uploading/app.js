@@ -9,7 +9,7 @@ const ID                = require("./models/id");
 const Image             = require("./models/image");
 const passport          = require("passport");
 const localStrategy     = require("passport-local").Strategy;
-const { findByIdAndUpdate } = require("./models/id");
+const { findByIdAndUpdate, find } = require("./models/id");
 const app               = express();
 
 app.use(methodOverride('_method'));
@@ -99,28 +99,34 @@ app.get('/user', async(req, res) => {
 app.get('/user/:id', async(req, res) => {
     const {id} = req.params;
     const findUser = await ID.findById(id).populate('image');
-    // const imagesData = await Image.find({user_id : id});
-    // res.render('')
-    // console.log(imagesData);
-    res.render('userinfo',{x : findUser.image})
+    res.render('userinfo',{x : findUser.image, y : findUser});
 })
 
-app.get('/photo/:id', async(req, res) => {
+app.get('/photo/:id', isLoggedIn, async(req, res) => {
     const {id} = req.params;
+    const findUser = await ID.findOne({image : {$in : id}});
     const imageData = await Image.findById(id);
-    res.render('card', {idb : imageData});
+    if(req.user._id.equals(undefined)){
+        return res.render('card', {idb : imageData, owner : findUser._id, curr : "dasdads"}); 
+    }
+    res.render('card', {idb : imageData, owner : findUser._id, curr : req.user._id});
 })
 
 app.get('/photo/:id/edit', isLoggedIn, async(req, res) => {
     const {id} = req.params;
     const imageData = await Image.findById(id);
-    res.render('edit', {data : imageData})
+    const findUser = await ID.findOne({image : id});
+    if(findUser._id.equals(req.user._id)){
+        return res.render('edit', {data : imageData});
+    }
+    console.log("Access Denied!");
+    res.redirect('/show');
 });
 
 app.put('/photo/:id', async(req, res) => {
     const {id} = req.params;
     const imageData = await Image.findByIdAndUpdate(id, req.body, {runValidators: true, new: true});
-    res.render('card', {idb : imageData});
+    res.redirect(`/photo/${id}`);
 })
 
 app.get('/show', async (req, res) => {
@@ -152,7 +158,7 @@ app.post('/photo', async(req, res) => {
     console.log(images);
     findUser.image.push(images._id);
     await findUser.save();
-    res.render('card', {idb : images});
+    res.render('card', {idb : images, curr : findUser._id, owner : findUser._id});
 });
 
 app.post('/login', passport.authenticate('local', {
@@ -170,6 +176,7 @@ app.post('/register', async (req, res) => {
         email, 
         password : hash
     });
+    // req.session.user_id = user._id;
     await user.save();
     res.redirect('/show');
 });

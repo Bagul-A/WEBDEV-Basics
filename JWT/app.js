@@ -7,7 +7,7 @@ const mongoose          = require('mongoose');
 const DB                = require('./models/jwt');
 const app               = express();
 const JWT_SECRET        = 'fjkghasdofb@@$#!@#@#euqrrei8768jkehf';
-var User_Token        = null;
+var User_Token          = '1.1.1';
 
 mongoose.connect('mongodb://localhost:27017/JWT', {useNewUrlParser: true , useUnifiedTopology: true, useCreateIndex: true})
     .then( () => {
@@ -48,7 +48,7 @@ app.put('/change/userww', async(req, res) => {
         );
     } 
     catch (error) {
-        res.send(error, "Madarhod chhedchhad karta he");
+        res.status(error, "Madarhod chhedchhad karta he");
     }
     res.send(token);
 });

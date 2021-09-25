@@ -32,7 +32,8 @@ app.get('/photo/new',(req, res) => {
 
 app.get('/photo/:id', async(req, res) => {
     const {id} = req.params;
-    const data = await Database.findById(id);
+    const data = await Database.findOne({_id : id});
+    console.log(data._id);
     res.render('photo/show', {data});
 });
 
