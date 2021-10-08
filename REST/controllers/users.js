@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const User = require('../models/user');
-
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
@@ -70,26 +69,22 @@ exports.logIn = async (req, res, next) => {
                 });
             });
         }
-    })
-        .catch(err => {
-            res.status(404).json({
-                message: 'No such user exist or you must have entered password/email wrong :(',
-                error: err
-            })
-        });
+    }).catch(err => {
+        res.status(404).json({
+            message: 'No such user exist or you must have entered password/email wrong :(',
+            error: err
+        })
+    });
 }
 
 exports.remove = (req, res, next) => {
-    User.remove({ _id: req.params.id })
-        .exec()
-        .then(result => {
-            res.status(200).json({
-                message: 'User deleted!'
-            });
-        })
-        .catch(err => {
-            res.status(500).json({
-                error: err
-            });
+    User.remove({ _id: req.params.id }).exec().then(result => {
+        res.status(200).json({
+            message: 'User deleted!'
         });
+    }).catch(err => {
+        res.status(500).json({
+            error: err
+        });
+    });
 }

@@ -1,0 +1,347 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+<title>MutualFinder</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Elite Match Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/css/font-awesome.css" rel="stylesheet"> 
+<link rel="stylesheet" href="/css/jquery-ui.css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!--fonts-->
+<link href="//fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+<!--//fonts-->
+
+</head>
+<body>
+<!--banner start here-->
+<div class="banner-w3ls inner-banner-agileits" id="home">
+	<div class="container">
+		<!-- header -->
+                 <div class="header-inner">
+					  <h1 class="logo">
+						<a href="index.html">Mutual<span>Finder</span></a></h1>
+						<nav class="navbar navbar-default">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+							<!-- navbar-header -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav navbar-right">
+									<li><a href="index.html">Home</a></li>
+									<li><a href="about.html">About</a></li>
+									<li><a href="matches.html">Matches</a></li>
+									<li class="dropdown menu__item">
+										<a href="#" class="dropdown-toggle menu__link"  data-toggle="dropdown" data-hover="Pages" role="button" aria-haspopup="true" aria-expanded="false">Pages<span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="codes.html">Short Codes</a></li>
+											<li><a href="icons.html">Icons</a></li>
+										</ul>
+									</li>
+									<li><a href="contact.html">Contact</a></li>
+								</ul>
+							</div>
+							<div class="clearfix"> </div>	
+						</nav>
+						<div class="header-right-w3ls">
+							<a href="/users/login">Log In</a>
+							<a href="/users/register">Register</a>
+						</div>
+						<div class="clearfix"></div>
+				</div>
+</div>			
+</div>
+<!--//home-->
+<!--banner end here-->
+<!-- breadcrumbs -->
+<div class="w3l_agileits_breadcrumbs">
+   <div class="container">
+		<div class="w3l_agileits_breadcrumbs_inner">
+			<ul>
+				<li><a href="index.html">Home</a><span>&#187;</span></li>
+									
+				<li>Register</li>
+				</ul>
+		</div>
+	</div>
+</div>
+<!-- //breadcrumbs -->
+<div class="login elite-app">
+	<div class="container">
+	<div class="tittle-agileinfo">
+				<h3>Register Now</h3>
+			</div>
+	<div class="col-md-8 login-form-w3-agile">
+			<form action="/users/register" method="post" enctype="multipart/form-data">
+				<!-- <div class="w3_form_body_grid">
+					<span>Profile For</span>
+					<select id="w3_country" onchange="change_country(this.value)" class="frm-field required">
+						<option value="null">Select</option>
+						<option value="null">Myself</option>   
+						<option value="null">Son</option>   
+						<option value="null">Daughter</option>   
+						<option value="null">Brother</option>   
+						<option value="null">Sister</option>  
+						<option value="null">Relative</option>
+						<option value="null">Friend</option>						
+					</select>
+				</div> -->
+				<div style=" position: absolute; margin-left: 65%;">
+					<div style="width: 200px;height: 200px;overflow: hidden;-webkit-border-radius: 50%;-moz-border-radius: 50%;-ms-border-radius: 50%;-o-border-radius: 50%;border-radius: 50%;">
+						<image style="cursor: pointer;margin-left: 30px; width: 130px; height: 130px;" src="data:image/png;base64,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" />
+					</div>
+					 <input style="margin-top: -30px;" id="imageUpload" type="file" name="image" placeholder="Photo" required="" capture>
+				</div>
+				<div class="w3_form_body_grid">
+					<span>Name</span>
+					<input type="text" name="Name" placeholder="Name" required="">
+				</div>
+				<!-- <div class="w3_form_body_grid">
+					<span>Gender</span>
+					<div class="w3_gender">
+						<div class="colr ert">
+							<label class="radio"><input type="radio" name="gender" checked=""><i></i>Male</label>
+						</div>
+						<div class="colr">
+							<label class="radio"><input type="radio" name="gender"><i></i>Female</label>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="clearfix"> </div>
+				</div> -->
+				<div class="w3_form_body_grid">
+					<span>Caste</span>
+					<select id="w3_country1" name="caste" class="frm-field required">
+						<option value="null">select category</option> 
+						<option value="ST">ST</option>  
+						<option value="SC">SC</option>   
+						<option value="OBC">OBC</option>   
+						<option value="GEN">GEN</option>     						
+					</select>
+				</div>
+				<div class="w3_form_body_grid">
+					<span>Department</span>
+					<input type="text" name="department" placeholder="Department" required="">
+				</div>
+				<div class="w3_form_body_grid">
+					<span>Designation</span>
+					<input type="text" name="designation" placeholder="Designation" required="">
+				</div>
+				<div class="w3_form_body_grid">
+					<span>Basic salary</span>
+					<input type="number" name="salary" placeholder="Basic salary" required=""><br><br><br>
+				</div>
+				<div class="w3_form_body_grid">
+					<span>Job Description</span>
+					<input type="text" name="desc" placeholder="Job Description" required="">
+				</div>
+				<!--<div class="w3_form_body_grid w3_form_body_grid1">
+					<span>Date Of Birth</span>
+					<input class="date" id="datepicker" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '2/08/2013';}" required="">
+				</div> -->
+				<div class="w3_form_body_grid">
+					<span>Email</span>
+					<input type="email" name="Email" placeholder="Email" required="">
+				</div>
+				<div class="w3_form_body_grid w3_form_body_grid1">
+					<span>Password</span>
+					<input type="password" name="Password" placeholder="Password" required="">
+				</div>
+				<strong>Current location:</strong><br><br>
+				<!--<div class="w3_form_body_grid">
+					<span>religion</span>
+					<select id="w3_country1" onchange="change_country(this.value)" class="frm-field required">
+						<option value="null">Hindu</option>  
+						<option value="null">Muslim</option>   
+						<option value="null">Christian</option>   
+						<option value="null">Sikh</option>   
+						<option value="null">Jain</option>   
+						<option value="null">Buddhist</option>
+						<option value="null">No Religious Belief</option>   						
+					</select>
+				</div>-->
+				<div class="w3_form_body_grid w3_form_body_grid1">
+					<span>Zone Code</span>
+					<input type="text" name="Zone1" placeholder="Zone Code" required="">
+				</div>
+				<div class="w3_form_body_grid w3_form_body_grid1">
+					<span>Division Code</span>
+					<input type="text" name="Div1" placeholder="Division Code" required="">
+				</div>
+				<div class="w3_form_body_grid w3_form_body_grid1">
+					<span>Headquarter Code</span>
+					<input type="text" name="Hq1" placeholder="Headquarter Code" required="">
+				</div>
+				<strong>Location you want to be transfered:</strong><br><br>
+				<div class="w3_form_body_grid w3_form_body_grid1">
+					<span>Zone Code</span>
+					<input type="text" name="Zone2" placeholder="Zone Code" required="">
+				</div>
+				<div class="w3_form_body_grid w3_form_body_grid1">
+					<span>Division Code</span>
+					<input type="text" name="Div2" placeholder="Division Code" required="">
+				</div>
+				<div class="w3_form_body_grid w3_form_body_grid1">
+					<span>Headquarter Code</span>
+					<input type="text" name="Hq2" placeholder="Headquarter Code" required="">
+				</div>
+				<input type="submit" value="Sign Up">
+				<h5 style="margin-top: 20px; margin-left: 44%;">Already a member....<i class="fa fa-hand-o-down" aria-hidden="true"></i></h5>
+				<div style="background-color: black; width: 200px; margin-left: 41%;" class="sim-button button12"><a href="/">Login</a></div>
+			</form>
+			<h4>Continue With</h4>
+			<div class="social_icons agileinfo_social_asd">
+				<!-- Facebook -->
+				<a href="#" class="slide-social wthree_slide_social">
+					<div class="button">5 Likes</div>
+					<div class="facebook icon"> <i class="fa fa-facebook" aria-hidden="true"></i> </div>
+					<div class="facebook slide">
+						<p>Facebook</p>
+					</div>
+				</a>
+				<!-- Twitter -->
+				<a href="#" class="slide-social wthree_slide_social">
+					<div class="button">8 Tweets</div>
+					<div class="twitter icon"> <i class="fa fa-twitter" aria-hidden="true"></i> </div>
+					<div class="twitter slide">
+						<p>Twitter</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--login-inner-->
+<!-- footer -->
+<div class="w3l_footer">
+		<div class="container">
+				<div class="w3ls_footer_grid">
+					<div class="col-md-4 w3ls_footer_grid_left">
+							<h4>Location:</h4>
+							<p>Matrimonium Elite, Ipswich,<br> Foxhall Road, UK</p>
+					</div>
+					<div class="col-md-4 w3ls_footer_grid_left">
+							<h4>Contact us:</h4>
+							<p><span>Phone : </span>505-222-5432</p>
+							<p><span>Email : </span><a href="mailto:info@example.com">info@example.com</a></p>
+					</div>
+					<div class="col-md-4 w3ls_footer_grid_left">
+							<h4>Opening hours:</h4>
+							<p>Working days (8am-9pm)</p>
+							<p>Sundays (9am-1pm)</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<!-- footer-button-info -->
+				<div class="footer-middle-agileinfo">
+					<div class="footer-button">
+					<div class="button-top-w3layouts">
+						<div class="logo-icons-w3ls">
+							<i class="fa fa-heart heart1" aria-hidden="true"></i>
+							<i class="fa fa-heart-o heart2" aria-hidden="true"></i>
+						</div>
+					</div>
+						<div class="sim-button button12"><a href="contact.html">Contact Us</a></div>
+						<h2>We’re Committed to Service Excellence.</h2>
+					</div>
+				</div>
+				<!-- footer-button-info -->
+		</div>
+</div>
+
+<div class="botttom-nav-agileits">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="matches.html">Matches</a></li>
+		<li><a href="contact.html">Contact</a></li>
+	</ul>
+</div>
+<div class="footer-w3layouts">
+				<div class="container">
+				<div class="agile-copy">
+					<p>© 2017 Elite Match. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+				</div>
+				<div class="agileits-social">
+					<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-rss"></i></a></li>
+							<li><a href="#"><i class="fa fa-vk"></i></a></li>
+						</ul>
+				</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+<!--/footer -->
+
+<!-- js -->
+<script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
+
+
+
+
+<script src="js/SmoothScroll.min.js"></script>
+<!-- smooth scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+		/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+			};
+		*/								
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
+	
+	
+	<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- //smooth scrolling -->
+	<!-- //for-Clients -->
+	<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+<!-- Calendar -->
+				<script src="js/jquery-ui.js"></script>
+				  <script>
+						  $(function() {
+							$( "#datepicker" ).datepicker();
+						  });
+				  </script>
+			<!-- //Calendar -->
+<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+	
+
+</body>
+</html>
